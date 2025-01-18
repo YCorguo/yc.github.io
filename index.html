@@ -25,7 +25,7 @@
             padding: 20px 30px;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
+            max-width: 800px;
             width: 90%;
         }
 
@@ -41,6 +41,24 @@
             font-size: 1.2em;
             line-height: 1.6;
             margin: 10px 0;
+        }
+
+        /* 图片样式 */
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .image-gallery img {
+            width: 30%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
         }
 
         /* 按钮样式 */
@@ -73,6 +91,11 @@
         <p>
             我是叶澈，养了一只可爱的小猫，你想要看看吗？
         </p>
+        <div class="image-gallery">
+            <img src="2278541736479019_.pic_hd.jpg" alt="猫咪图片1">
+            <img src="2375271737136024_.pic.jpg" alt="猫咪图片2">
+            <img src="2375251737136001_.pic.jpg" alt="猫咪图片3">
+        </div>
         <a href="https://www.baidu.com" class="button" target="_blank">这只是百度</a>
     </div>
 </body>
