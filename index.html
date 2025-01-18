@@ -55,10 +55,21 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
+            cursor: pointer;
+            position: relative;
         }
 
         .image-gallery img:hover {
             transform: scale(1.05);
+        }
+
+        .image-gallery img.selected::after {
+            content: '✔';
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 1.5em;
+            color: #0984e3;
         }
 
         /* 按钮样式 */
@@ -84,19 +95,29 @@
             transform: translateY(0);
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.image-gallery img');
+            images.forEach(img => {
+                img.addEventListener('click', function() {
+                    this.classList.toggle('selected');
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>Hi, 你是来卖小猫玩具的吗？</h1>
         <p>
-            我是叶澈，养了一只可爱的小猫，你想要看看吗？
+            我是叶澈，我的妻子是可爱的小猫，你能看出下面哪一个是我们的孩子吗？
         </p>
         <div class="image-gallery">
-            <img src="2278541736479019_.pic_hd.jpg" alt="猫咪图片1">
-            <img src="2375271737136024_.pic.jpg" alt="猫咪图片2">
-            <img src="2375251737136001_.pic.jpg" alt="猫咪图片3">
+            <img src="7611737203690_.pic.jpg" alt="猫咪图片1">
+            <img src="7591737203574_.pic.jpg" alt="猫咪图片2">
+            <img src="7601737203641_.pic_hd.jpg" alt="猫咪图片3">
         </div>
-        <a href="https://www.baidu.com" class="button" target="_blank">这只是百度</a>
+        <a href="https://www.baidu.com" class="button" target="_blank">是这只！</a>
     </div>
 </body>
 </html>
